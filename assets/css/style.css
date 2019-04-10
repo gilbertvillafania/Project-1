@@ -6,10 +6,13 @@ body {
 
 .container {
   position: relative;
+  font-family: "Permanent Marker", cursive;
 }
 
 header.jumbotron {
+  font-family: "Permanent Marker", cursive;
   background: black;
+  color: red;
   border-radius: 12px;
 }
 
