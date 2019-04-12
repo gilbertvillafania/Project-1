@@ -10,7 +10,11 @@ function displaySuperhero(event) {
 
   var superhero = $(this).attr("name");
   var queryURL = "https://comicvine.gamespot.com/api"  + superhero + "b057b892091e49452a4d3b1ea5baa460104470f0";
-
+  $.ajaxPrefilter(function(options) {
+    if (options.crossDomain && $.support.cors) {
+        options.url = 'https://cors-anywhere.herokuapp.com/' + options.url;
+    }
+});
   $.ajax({
     url: queryURL,
     method: "GET"
