@@ -1,6 +1,6 @@
 function displaySuperhero() {
 
-  var superhero = $(this).attr("data-name");
+  var superhero = $(this).attr("name");
   var queryURL = "https://comicvine.gamespot.com/api"  + superhero + "b057b892091e49452a4d3b1ea5baa460104470f0";
 
   $.ajax({
@@ -8,11 +8,13 @@ function displaySuperhero() {
     method: "GET"
   }).then(function(response) {
 
-    var superheroDiv = $("div id 'superhero-image");
+    superheroDiv = $("<div class='superhero'>")
     var image = response.image;
     var displayimage = $("<img>").attr("src", image);
     superheroDiv.append(displayimage);
 
   });
+
+  $(document).on("click", "#add-superhero", displaySuperhero);
 
 }
