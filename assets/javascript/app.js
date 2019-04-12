@@ -8,21 +8,24 @@ function displaySuperhero(event) {
 
   event.preventDefault();
 
-  var superhero = $(this).attr("name");
-  var queryURL = "https://comicvine.gamespot.com/api/characters?"  + superhero + "api_key=b057b892091e49452a4d3b1ea5baa460104470f0";
+  var superhero = $('#superhero-input').val().trim();
+
+  var queryURL = "https://superheroapi.com/api/10157355780833919/search/" + superhero;
+
+  console.log(superhero);
 
   $.ajaxPrefilter(function(options) {
     if (options.crossDomain && $.support.cors) {
         options.url = 'https://cors-anywhere.herokuapp.com/' + options.url;
     }
 });
-
   $.ajax({
     url: queryURL,
     method: "GET"
   }).then(function(response) {
+    console.log(response);
 
-    superheroDiv = $("<div class='superhero'>")
+    superheroDiv = $("<div class='superhero'");
     var image = response.image;
     console.log(response.image);
     var displayimage = $("<img>").attr("src", image);
