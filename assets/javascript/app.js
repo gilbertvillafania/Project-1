@@ -8,14 +8,18 @@ function displaySuperhero(event) {
 
   event.preventDefault();
 
-  var superhero = $(this).attr("name");
-  var queryURL = "https://comicvine.gamespot.com/api/characters?"  + superhero + "api_key=b057b892091e49452a4d3b1ea5baa460104470f0";
+  var superhero = $('#superhero-input').val().trim();
+
+  var queryURL = "https://superheroapi.com/api/10157355780833919/search/" + superhero;
+
+  console.log(superhero);
 
   $.ajaxPrefilter(function(options) {
     if (options.crossDomain && $.support.cors) {
         options.url = 'https://cors-anywhere.herokuapp.com/' + options.url;
     }
 });
+<<<<<<< HEAD
 
   $.ajaxPrefilter(function (options) {
     if (options.crossDomain && $.support.cors) {
@@ -29,6 +33,19 @@ $.ajax(url, { headers: { Authorization: 'Bearer 7RrX7J.........' }})
         url: queryURL,
         method: "GET"
       }).then(function (response) {
+=======
+  $.ajax({
+    url: queryURL,
+    method: "GET"
+  }).then(function(response) {
+    console.log(response);
+
+    superheroDiv = $("<div class='superhero'");
+    var image = response.image;
+    console.log(response.image);
+    var displayimage = $("<img>").attr("src", image);
+    superheroDiv.append(displayimage);
+>>>>>>> 03b8a74c764a8c2c63a5abcd5e25b5ef2f2a62c7
 
         superheroDiv = $("<div class='superhero'>")
         var image = response.image;
