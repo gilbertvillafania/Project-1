@@ -19,21 +19,6 @@ function displaySuperhero(event) {
         options.url = 'https://cors-anywhere.herokuapp.com/' + options.url;
     }
 });
-<<<<<<< HEAD
-
-  $.ajaxPrefilter(function (options) {
-    if (options.crossDomain && $.support.cors) {
-      options.url = 'https://cors-anywhere.herokuapp.com/' + options.url;
-    }
-  });
-
-$.ajax(url, { headers: { Authorization: 'Bearer 7RrX7J.........' }})
-    .then(function(response) {
-      $.ajax({
-        url: queryURL,
-        method: "GET"
-      }).then(function (response) {
-=======
   $.ajax({
     url: queryURL,
     method: "GET"
@@ -45,14 +30,6 @@ $.ajax(url, { headers: { Authorization: 'Bearer 7RrX7J.........' }})
     console.log(response.image);
     var displayimage = $("<img>").attr("src", image);
     superheroDiv.append(displayimage);
->>>>>>> 03b8a74c764a8c2c63a5abcd5e25b5ef2f2a62c7
-
-        superheroDiv = $("<div class='superhero'>")
-        var image = response.image;
-        console.log(response.image);
-        var displayimage = $("<img>").attr("src", image);
-        superheroDiv.append(displayimage);
-
-      });
-
-    )
+    });
+    
+  }
