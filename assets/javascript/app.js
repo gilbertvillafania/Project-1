@@ -8,7 +8,7 @@ function displaySuperhero() {
     method: "GET"
   }).then(function(response) {
 
-    var superheroDiv = $("div class = 'superhero'");
+    var superheroDiv = $("div id 'superhero-image");
     var image = response.image;
     var displayimage = $("<img>").attr("src", image);
     superheroDiv.append(displayimage);
