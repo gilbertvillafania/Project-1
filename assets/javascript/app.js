@@ -48,6 +48,11 @@ function displaySuperhero(event) {
     console.log(birthplace);
     var displaybirthplace = $("<p>").text("Place of Birth: " + birthplace);
     $("#superhero-date-of-birth").append(displaybirthplace);
+    for (let index = 0; index < array.length; index++) {
+    var appearance = response.results[0].appearance[index];
+    var displayappearance = $("<p>").text(appearance);
+    $("#superhero-summary-origin").append(displayappearance);
+    }
     var powerstats = response.results[0].powerstats.combat;
     console.log(powerstats);
     var displayPowerstats = $("<p>").text("Powerstats: " + powerstats);
@@ -56,6 +61,12 @@ function displaySuperhero(event) {
     console.log(firstappearance);
     var displayfirstappearance = $("<p>").text("First Appearance: " + firstappearance);
     $("#superhero-powers-first-appearance-story-arcs").append(displayfirstappearance);
+    var groupaffiliation = response.results[0].connections["group-affiliation"];
+    var displaygroup = $("<p>").text("Group Affiliations: " + groupaffiliation);
+    $("#group-affiliations").append(displaygroup);
+    var relatives = response.results[0].connections.relatives;
+    var displayrelatives = $("<p>").text("Relatives: " + relatives);
+    $("#relatives").append(displayrelatives);
 
   });
 
