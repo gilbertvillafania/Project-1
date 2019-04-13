@@ -12,20 +12,22 @@
   <link href="https://fonts.googleapis.com/css?family=Permanent+Marker" rel="stylesheet">
 
   <meta name="viewport" content="initial-scale=1.0">
-    <meta charset="utf-8">
-    <style>
-      /* Always set the map height explicitly to define the size of the div
+  <meta charset="utf-8">
+  <style>
+    /* Always set the map height explicitly to define the size of the div
        * element that contains the map. */
-      #map {
-        height: 100%;
-      }
-      /* Optional: Makes the sample page fill the window. */
-      html, body {
-        height: 100%;
-        margin: 0;
-        padding: 0;
-      }
-    </style>
+    #map {
+      height: 100%;
+    }
+
+    /* Optional: Makes the sample page fill the window. */
+    html,
+    body {
+      height: 150px;
+      margin: 0;
+      padding: 0;
+    }
+  </style>
 
 </head>
 
@@ -47,15 +49,15 @@
         <form id="superhero-form">
           <label for="superhero-input"></label>
           <input id="add-superhero" type="submit" value="Find A Superhero">
-          <input type="text" id="superhero-input" placeholder="Enter Supehero">
+          <input type="text" id="superhero-input" placeholder="Enter Superhero">
         </form>
-      </div>  
+      </div>
       <div class="col-md-6">
         <form id="map-form">
-            <label for="zip-code-input"></label>
-            <input id="add-zipcode" type="submit" value="Find A Comic Book Store Near You">
-            <input type="text" id="zip-code-input" placeholder='Enter Zip Code'>
-          </form>
+          <label for="zip-code-input"></label>
+          <input id="add-zipcode" type="submit" value="Find A Comic Book Store Near You">
+          <input type="text" id="zip-code-input" placeholder='Enter Zip Code'>
+        </form>
       </div>
     </div>
     <div class="row">
@@ -95,48 +97,38 @@
           </div>
           <ul class="list-group list-group-flush">
             <li class="list-group-item">Group Affiliations</li>
-              <div id="group-affiliations"></div>
+            <div id="group-affiliations"></div>
             <li class="list-group-item">Relatives</li>
-              <div id="relatives"></div>
+            <div id="relatives"></div>
             <li class="list-group-item">Enemies</li>
-              <div id="enemies"></div>
+            <div id="enemies"></div>
           </ul>
         </div>
       </div>
-    <div>
-    
-    <div class='map-container'>
-      <div class="row">
-        <div class="col-lg-12">
-            <div class="card">
+      <div>
+
+        <div class='map-container'>
+          <div class="row">
+            <div class="col-lg-12">
+              <div class="card">
                 <div class="card-body">
                   <h5 class="card-title" id="store-name">Comic Book Store</h5>
                   <p class="card-text" id="store-hours">Store Hours</p>
                 </div>
-                <div img class="card-img-bottom" id="map" style="height:100%"></div>
-                <script>
-                    var map;
-                    function initMap() {
-                      map = new google.maps.Map(document.getElementById('map'), {
-                        center: {lat: -34.397, lng: 150.644},
-                        zoom: 8
-                      });
-                    }
-                  </script>
+                <div img class="card-img-bottom" id="map"></div>
+              </div>
             </div>
-        </div>    
-      </div>  
-    </div>
-    
-  </div>
+          </div>
+        </div>
 
-    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-    <script type="text/javascript" src="assets/javascript/app.js"></script>
-    <script async defer 
-      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD20NIWf6ypY2ycKxgB_pCVUPWYwP8F2Gs&callback=initMap">
-    </script>
+      </div>
 
+      <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+      <script type="text/javascript" src="assets/javascript/app.js"></script>
 
+      <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD20NIWf6ypY2ycKxgB_pCVUPWYwP8F2Gs&callback=initMap">
+      </script>
 </body>
 
 </html>
