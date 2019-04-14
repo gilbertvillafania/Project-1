@@ -31,18 +31,17 @@
         <form id="superhero-form">
           <label for="superhero-input"></label>
           <input id="add-superhero" type="submit" value="Find A Superhero">
-          <input type="text" id="superhero-input">
+          <input type="text" onfocus="this.value=''" id="superhero-input">
         </form>
       </div>
     </div>
     <div class="row">
       <div class="col-md-3">
         <div class="card mt-2">
-          <img class="card-img-top" id="cerebroimage" src="assets/images/cerebro-main.jpg" alt="Card image cap">
-          <img class="card-img-top" id="superheroimage" alt="Card image cap">
+          <img class="card-img-top" id="mainimage" src="assets/images/cerebro-main.jpg" alt="Card image cap">
           <div class="card-body">
-            <p class="card-text">Character Image / Name / Date of Birth</p>
-            <div id="superhero-date-of-birth"></div>
+            <p class="card-text">Basic Information</p>
+            <div id="superhero-basic-info"></div>
           </div>
         </div>
       </div>
@@ -50,8 +49,8 @@
         <div class="card mt-2">
           <div class="card">
             <div class="card-body">
-              Character Summary and Origin
-              <div id="superhero-summary-origin"></div>
+              Character Attributes
+              <div id="superhero-attributes"></div>
             </div>
           </div>
         </div>
@@ -60,8 +59,8 @@
         <div class="card mt-2">
           <div class="card">
             <div class="card-body">
-              Powers / First Appearance / Story Arcs
-              <div id="superhero-powers-first-appearance-story-arcs"></div>
+              Powerstats / First Appearance
+              <div id="superhero-powers-first-appearance"></div>
             </div>
           </div>
         </div>
@@ -72,12 +71,8 @@
             Supplemental Information
           </div>
           <ul class="list-group list-group-flush">
-            <li class="list-group-item">Group Affiliations</li>
               <div id="group-affiliations"></div>
-            <li class="list-group-item">Relatives</li>
               <div id="relatives"></div>
-            <li class="list-group-item">Enemies</li>
-              <div id="enemies"></div>
           </ul>
         </div>
       </div>
