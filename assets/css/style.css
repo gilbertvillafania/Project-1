@@ -41,6 +41,16 @@ h4 {
   padding-bottom: 10px;
 }
 
+#group-affiliations{
+  padding: 5px;
+  margin: 5px;
+}
+
+#relatives{
+  padding: 5px;
+  margin: 5px;
+}
+
 .marvel {
   background: black;
   border-radius: 6px;
@@ -50,17 +60,4 @@ h4 {
   padding: 5px;
   margin: 5px;
   margin-top: 5px;
-}
-
-#movie-form {
-  text-align: right;
-}
-
-input#movie-input {
-  color: black;
-}
-
-input#add-movie.btn,
-btn-deafult {
-  color: black;
 }
