@@ -1,12 +1,17 @@
 body {
   font-family: "Permanent Marker", cursive, sans-serif;
   background: whitesmoke;
-  color: red;
+  color: black;
+  margin: 20px;
+  background-image: url("https://i.pinimg.com/originals/72/18/e2/7218e261e63e04acc903df31ec88999c.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .container {
   position: relative;
   font-family: "Permanent Marker", cursive;
+  
 }
 
 header.jumbotron {
@@ -20,6 +25,7 @@ p {
   font-family: "Permanent Marker", cursive;
   padding-top: 10px;
   font-size: 18px;
+  color:red;
 }
 
 
@@ -36,7 +42,7 @@ h1 {
 
 h4 {
   font-family: "Permanent Marker", cursive;
-  color: red;
+  color: rgb(10, 2, 2);
   padding-right: 10px;
   padding-bottom: 10px;
 }
@@ -60,4 +66,26 @@ h4 {
   padding: 5px;
   margin: 5px;
   margin-top: 5px;
+}
+
+#map {
+  float: left;
+  width: 100%;
+  max-width: 960px;
+  padding: 30px;
+  margin: 0 0 40px;
+}
+
+#superhero-form {
+  padding: 25px;
+
+}
+
+#description {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#add-superhero {
+  color: red;
 }

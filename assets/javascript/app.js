@@ -22,13 +22,10 @@ function displaySuperhero(event) {
     method: "GET"
   }).then(function(response) {
 
-    console.log(response);
-    console.log(superhero);
     for (let index = 0; index < response.results.length; index++) {
       if(response.results[index].name.toLowerCase() === superhero){
         $("#mainimage").empty();
-        var mainimage = $("#mainimage").attr("src", response.results[index].image.url)
-        console.log(mainimage);
+        $("#mainimage").attr("src", response.results[index].image.url);
         $("#superhero-basic-info").empty();
         var name = response.results[index].name;
         var displayName = $("<p>").text("Name: " + name);
